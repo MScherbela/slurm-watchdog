@@ -12,7 +12,7 @@ def parse_args():
         "--t-kill",
         type=int,
         help="Number of seconds to wait for logfile output before killing the job",
-        default=600,
+        default=3600,
     )
     parser.add_argument(
         "--t-warn",
@@ -24,7 +24,7 @@ def parse_args():
         "--t-check",
         type=int,
         help="Number of seconds to wait between checking the logfile",
-        default=10,
+        default=60,
     )
     parser.add_argument(
         "--initial-wait",
