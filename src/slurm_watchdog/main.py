@@ -40,7 +40,7 @@ def parse_args():
 
 def kill_job(scancel_bin):
     slurm_id = os.environ.get("SLURM_JOB_ID")
-    print(f"Killing job {slurm_id} due to inactivity.", flush=True)
+    print(f"slurm-watchdog: Killing job {slurm_id} due to inactivity.", flush=True)
     subprocess.run([scancel_bin, slurm_id])
 
 
